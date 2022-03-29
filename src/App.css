@@ -6,6 +6,7 @@ body {
   overflow-x: hidden; /* Hide scrollbars */
   background-image: url('assets/wallpaper1.png');
   background-size: cover;
+  font-family: Montserrat Medium;
 }
 
 .side_logo{
@@ -28,7 +29,7 @@ body {
 .side_select{
   cursor: pointer;
 }
-.side_select.acive{
+.side_select.acive a{
   color:#97d553;
 }
 .side_selector a{

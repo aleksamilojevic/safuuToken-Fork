@@ -47,8 +47,12 @@ export default function Sidebar(props) {
                         }}
                         className={select_sideItem === "account" ? "side_select acive" : "side_select"}
                     >
-                        <AccountCircle />
-                        <span>Account</span>
+                        <Link to="/account">
+                            <>
+                                <AccountCircle />
+                                <span>Account</span>
+                            </>
+                        </Link>
                     </li>
                     <li
                         onClick={() => {
@@ -56,8 +60,12 @@ export default function Sidebar(props) {
                         }}
                         className={select_sideItem === "calculator" ? "side_select acive" : "side_select"}
                     >
-                        <Calculate />
-                        <span>Calculator</span>
+                        <Link to="/calculator">
+                            <>
+                                <Calculate />
+                                <span>Calculator</span>
+                            </>
+                        </Link>
                     </li>
                     <li className="side_select">
                         <SwapHorizontalCircle />

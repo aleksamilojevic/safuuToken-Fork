@@ -15,6 +15,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Dashboard from "./Dashboard";
+import Accounts from "./Account";
+import Calculator from "./Calculator";
 
 const drawerWidth = 240;
 
@@ -38,8 +40,8 @@ function Main(props) {
                     <Fragment>
                         <Routes>
                             <Route exact path="/" element={<Dashboard />} />
-                            {/* <Route exact path="/account" element={<Swap />} />
-                            <Route exact path="/calculator" element={<Faucet />} /> */}
+                            <Route exact path="/account" element={<Accounts />} />
+                            <Route exact path="/calculator" element={<Calculator />} />
                         </Routes>
                     </Fragment>
                 </Router>
