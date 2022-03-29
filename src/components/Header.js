@@ -1,27 +1,31 @@
-import logo from '../assets/logo.png'
-import { useDispatch, useSelector } from "react-redux";
-import { connect } from '../store/walletActions'
-export default function Header() {
-  const dispatch = useDispatch();
-  const wallet = useSelector((state) => state.wallet);
-
-  const connectWalletPressed = () => {
-    dispatch(connect())
-  };
-
-  return(
-    <nav className="App-header">
-      <img className='logo-image' src={logo}></img>
-      <div className='App-header-links'>
-        <a href='https://twitter.com/boredogeclub'><i className="bi bi-twitter"></i></a>
-        <a href='https://www.instagram.com/boreddogeclub'><i className="bi bi-instagram"></i></a>
-        <a href='https://discord.com/invite/boreddogeclub/'><i className="bi bi-discord"></i></a>
-      </div>      
-      <button type="button" className="btn btn-dark btn-outline-light" onClick={connectWalletPressed}>
-        {wallet.account !== null ? ( String(wallet.account).substring(0, 6) + "..." + String(wallet.account).substring(38) ) : 
-        (
-          <span>Connect Wallet</span>
-        )}</button>
-    </nav>
-  )
+import * as React from "react";
+import { connect } from "../store/walletActions";
+import Account from "./account/";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+export default function Header(props) {
+    const drawerWidth = 300;
+    return (
+        <AppBar
+            position="fixed"
+            sx={{
+                width: { sm: `calc(100% - ${drawerWidth}px)` },
+                ml: { sm: `${drawerWidth}px` },
+                background: "transparent",
+                boxShadow: "none",
+            }}
+        >
+            <Toolbar sx={{ justifyContent: { sm: "end", xs: "space-between" } }}>
+                <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={props.openMenu} sx={{ mr: 2, display: { sm: "none" } }}>
+                    <MenuIcon />
+                </IconButton>
+                <Box className="wallet_connect">
+                    <Account />
+                </Box>
+            </Toolbar>
+        </AppBar>
+    );
 }

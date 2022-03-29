@@ -1,108 +1,58 @@
-import img from '../assets/pak.gif'
-import { ethers } from 'ethers'
-import { useState, useEffect } from 'react'
-import { Store } from 'react-notifications-component';
+// import img from "../assets/pak.gif";
+import { ethers } from "ethers";
+import { useState, useEffect } from "react";
+import { Store } from "react-notifications-component";
 import { useSelector } from "react-redux";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
-export default function Main() {
-  const wallet = useSelector((state) => state.wallet);
-  const [count, setCount] = useState(1)
-  const [value, setValue] = useState(0.1)
-  const [mintCount, setMintCount] = useState(Math.floor(Math.random() * 10000) + 1)
-  const onMintPressed = async () => {
-    console.log(wallet)
-    const signer = wallet.provider.getSigner()
-    const balance = await wallet.provider.getBalance(await signer.getAddress())
-    console.log(balance)
-    if (balance < ethers.utils.parseEther(`${value * count}`)){
-      Store.addNotification({
-        title: "Error",
-        message: "Insufficient Funds",
-        type: "info",
-        insert: "top",
-        container: "top-right",
-        animationIn: ["animate__animated", "animate__fadeIn"],
-        animationOut: ["animate__animated", "animate__fadeOut"],
-        dismiss: {
-          duration: 1000,
-          onScreen: true
-        }
-      });
-      return 
-    } 
-    const tx = signer.sendTransaction({
-        to: "0x09EB99C50f868c3f6621aEBCaC4F29bCaE40383f", 
-        value: ethers.utils.parseEther( `${value * count}`)
-    });
-  }
-  const onPlus = () => {
-    if (count < 5) setCount(count + 1)
-    else setCount(5)
-  }
-  
-  const onMinus = () => {
-    if (count > 1) setCount(count - 1)
-    else setCount(1)
-  }
+import * as React from "react";
+import { Fragment } from "react";
+import ReactDOM from "react-dom";
+import PropTypes from "prop-types";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import Toolbar from "@mui/material/Toolbar";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 
-  const showAlert = async() => {
-    setMintCount(parseInt(mintCount) + 1)
-    let randomWallet = ethers.Wallet.createRandom();
-    Store.addNotification({
-      title: "Mint success",
-      message: randomWallet.address,
-      type: "warning",
-      insert: "top",
-      container: "top-right",
-      animationIn: ["animate__animated", "animate__fadeIn"],
-      animationOut: ["animate__animated", "animate__fadeOut"],
-      dismiss: {
-        duration: 1000,
-        onScreen: true
-      }
-    });
-  }
-  // useEffect(() => {
-  //   const interval = setInterval(showAlert, (Math.floor(Math.random() * 5) + 1) * 1000)
-  //   return () => clearInterval(interval);
-  // }, [mintCount]);
-  useEffect(() => {
-    setValue(count / 10)
-  }, [count])
+const drawerWidth = 240;
 
-  return(
-    <div>
-      <div className='mt-5'>
-            <div className='row mintSection mint'>
-              <div className='col-md-5'>
-                <img src={img} className="mintImage"/>
-              </div>
-              <div className='col-md-7 row'>
-                <h3 className='presale-h'>PRESALE IS LIVE</h3>
-                <h1 className='mint-h'>MINT YOUR NFT NOW</h1>
-                <div className='col
-                -5 mt-4'>
-                  <h2>{mintCount}/10000</h2>
-                  <h2>MINTED</h2>
-                  <h4>PRICE : 0.1 ETH</h4>
-                  <h6>Max Per Wallet: 5 </h6>
-                </div>
-                <div className='col
-                -7 mt-4'>
-                  <div className='mintCount'>
-                    <button type="button" className="btn btn-dark btn-outline-light" onClick={onMinus}> -</button>
-                    <p>{count}</p>
-                    <button type="button" className="btn btn-dark btn-outline-light" onClick={onPlus}> +</button>
-                  </div>
-                  
-                  {
-                    wallet.account !== null ? <button type="button" className="btn btn-dark btn-outline-light mintBTN" onClick={onMintPressed}> Mint</button> : <p>Please connect your wallet.</p>
-                  }
-                  <h3 className='pTotal'>Total : {value} ETH</h3>
-                </div>
-              </div>
-            </div>
-      </div>
-    </div>
-  )
+function Main(props) {
+    const { window } = props;
+    const [mobileOpen, setMobileOpen] = useState(false);
+
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
+    };
+    const container = window !== undefined ? () => window().document.body : undefined;
+
+    return (
+        <Box sx={{ display: "flex" }}>
+            <CssBaseline />
+            <Header openMenu={handleDrawerToggle} />
+            <Sidebar closeMenu={handleDrawerToggle} open={mobileOpen} container={container} />
+            <Box component="main" sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
+                <Toolbar />
+                <Router>
+                    <Fragment>
+                        <Routes>
+                            {/* <Route exact path="/" element={<Dashboard />} />
+                            <Route exact path="/account" element={<Swap />} />
+                            <Route exact path="/calculator" element={<Faucet />} /> */}
+                        </Routes>
+                    </Fragment>
+                </Router>
+            </Box>
+        </Box>
+    );
 }
+
+Main.propTypes = {
+    /**
+     * Injected by the documentation to work in an iframe.
+     * You won't need it on your project.
+     */
+    window: PropTypes.func,
+};
+
+export default Main;
