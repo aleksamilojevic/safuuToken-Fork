@@ -40,8 +40,8 @@ function Main(props) {
                     <Fragment>
                         <Routes>
                             <Route exact path="/" element={<Dashboard />} />
-                            <Route exact path="/account" element={<Accounts />} />
-                            <Route exact path="/calculator" element={<Calculator />} />
+                            <Route path="/account" element={<Accounts />} />
+                            <Route path="/calculator" element={<Calculator />} />
                         </Routes>
                     </Fragment>
                 </Router>
