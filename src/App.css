@@ -20,9 +20,10 @@ body {
 
 .side_logo{
   width: 70%;
-  margin: 20% 15% 25% 15%;
+  margin: 20% 15% calc(25% - 2rem) 15%;
 }
 .side_selector{
+  margin-top: 2rem;
   list-style-type: none;
   padding-left: 4rem;
   text-align: left;
