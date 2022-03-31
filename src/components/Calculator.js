@@ -14,7 +14,7 @@ import Slider, { SliderThumb } from "@mui/material/Slider";
 
 export default function Calculator(props) {
     const [pro, setPro] = useState(0);
-    const apy = Math.pow(2, Math.log2(383025.8) / 365);
+    const apy = Math.pow(2, Math.log2(383025.8 / 100 - 1) / 365);
     const [price, setPrice] = useState(160.63);
     const [m_price, setMPrice] = useState(160.63);
     const [day, setDay] = useState(30);
@@ -111,6 +111,7 @@ export default function Calculator(props) {
                                     valueLabelDisplay="auto"
                                     defaultValue={day}
                                     max={365}
+                                    min={1}
                                     onChange={(event, value) => {
                                         setDay(value);
                                     }}
@@ -128,11 +129,11 @@ export default function Calculator(props) {
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">SAFUU rewards estimation</Typography>
-                                    <Typography variant="h6">{Math.pow(apy, day) * pro} SAFUU</Typography>
+                                    <Typography variant="h6">{(Math.pow(apy, day) * pro).toFixed(5)} SAFUU</Typography>
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">Potential return</Typography>
-                                    <Typography variant="h6">${Math.pow(apy, day) * pro * price}</Typography>
+                                    <Typography variant="h6">${(Math.pow(apy, day) * pro * price).toFixed(5)}</Typography>
                                 </Box>
                             </Grid>
                         </Grid>
