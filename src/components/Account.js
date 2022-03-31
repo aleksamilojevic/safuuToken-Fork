@@ -9,12 +9,12 @@ import Typography from "@mui/material/Typography";
 
 export default function Accounts(props) {
     const Item = styled(Paper)(({ theme }) => ({
-        backgroundColor: "#102214",
+        backgroundColor: "rgba(0, 0, 0, 0.3)",
         ...theme.typography.body2,
         padding: theme.spacing(1),
         textAlign: "center",
         color: "white",
-        border: "solid thin #70d388",
+        border: "solid thin #e7b913",
         borderRadius: "10px",
         paddingTop: "1rem",
         paddingBottom: "1rem",
