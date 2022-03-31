@@ -48,6 +48,7 @@ const Application = () => {
         <Web3ReactProvider getLibrary={getLibrary}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
+                <div className="mask"></div>
                 <App />
             </ThemeProvider>
         </Web3ReactProvider>

@@ -19,78 +19,76 @@ import logo from "../assets/images/logo512.png";
 
 export default function Sidebar(props) {
     const drawerWidth = 300;
-    const [select_sideItem, setSelectItem] = useState("dashboard");
+    const [select_sideItem, setSelectItem] = useState(window.location.pathname);
     // useEffect(() => {
     //     console.log(select_sideItem);
     // }, select_sideItem);
     const drawer = (
-        <Router>
-            <div>
-                <img className="side_logo" src={logo} />
-                <ul className="side_selector">
-                    <li
-                        onClick={() => {
-                            setSelectItem("dashboard");
-                        }}
-                        className={select_sideItem === "dashboard" ? "side_select acive" : "side_select"}
-                    >
-                        <Link to="/">
-                            <>
-                                <Layers />
-                                <span>Dashboard</span>
-                            </>
-                        </Link>
-                    </li>
-                    <li
-                        onClick={() => {
-                            setSelectItem("account");
-                        }}
-                        className={select_sideItem === "account" ? "side_select acive" : "side_select"}
-                    >
-                        <Link to="/account">
-                            <>
-                                <AccountCircle />
-                                <span>Account</span>
-                            </>
-                        </Link>
-                    </li>
-                    <li
-                        onClick={() => {
-                            setSelectItem("calculator");
-                        }}
-                        className={select_sideItem === "calculator" ? "side_select acive" : "side_select"}
-                    >
-                        <Link to="/calculator">
-                            <>
-                                <Calculate />
-                                <span>Calculator</span>
-                            </>
-                        </Link>
-                    </li>
-                    <li className="side_select">
-                        <SwapHorizontalCircle />
-                        <span>Swap</span>
-                    </li>
-                    <li className="side_select">
-                        <a href="https://medusa-finance.gitbook.io/medusa/" target="_blank">
-                            <Article />
-                            <span>Docs</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <GitHub sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
-                        </a>
-                        <a href="#">
-                            <Twitter sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
-                        </a>
-                        <a href="#">
-                            <Museum sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </Router>
+        <div>
+            <img className="side_logo" src={logo} />
+            <ul className="side_selector">
+                <li
+                    onClick={() => {
+                        setSelectItem("/");
+                    }}
+                    className={select_sideItem === "/" ? "side_select acive" : "side_select"}
+                >
+                    <Link to="/">
+                        <>
+                            <Layers />
+                            <span>Dashboard</span>
+                        </>
+                    </Link>
+                </li>
+                <li
+                    onClick={() => {
+                        setSelectItem("/account");
+                    }}
+                    className={select_sideItem === "/account" ? "side_select acive" : "side_select"}
+                >
+                    <Link to="/account">
+                        <>
+                            <AccountCircle />
+                            <span>Account</span>
+                        </>
+                    </Link>
+                </li>
+                <li
+                    onClick={() => {
+                        setSelectItem("/calculator");
+                    }}
+                    className={select_sideItem === "/calculator" ? "side_select acive" : "side_select"}
+                >
+                    <Link to="/calculator">
+                        <>
+                            <Calculate />
+                            <span>Calculator</span>
+                        </>
+                    </Link>
+                </li>
+                <li className="side_select">
+                    <SwapHorizontalCircle />
+                    <span>Swap</span>
+                </li>
+                <li className="side_select">
+                    <a href="https://medusa-finance.gitbook.io/medusa/" target="_blank">
+                        <Article />
+                        <span>Docs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <GitHub sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
+                    </a>
+                    <a href="#">
+                        <Twitter sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
+                    </a>
+                    <a href="#">
+                        <Museum sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
+                    </a>
+                </li>
+            </ul>
+        </div>
     );
     return (
         <Box component="nav" sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }} aria-label="mailbox folders">

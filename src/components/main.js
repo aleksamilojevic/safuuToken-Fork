@@ -30,23 +30,21 @@ function Main(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: "flex" }}>
-            <CssBaseline />
-            <Header openMenu={handleDrawerToggle} />
-            <Sidebar closeMenu={handleDrawerToggle} open={mobileOpen} container={container} />
-            <Box component="main" sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
-                <Toolbar />
-                <Router>
-                    <Fragment>
-                        <Routes>
-                            <Route exact path="/" element={<Dashboard />} />
-                            <Route path="/account" element={<Accounts />} />
-                            <Route path="/calculator" element={<Calculator />} />
-                        </Routes>
-                    </Fragment>
-                </Router>
+        <Router>
+            <Box sx={{ display: "flex" }}>
+                <CssBaseline />
+                <Header openMenu={handleDrawerToggle} />
+                <Sidebar closeMenu={handleDrawerToggle} open={mobileOpen} container={container} />
+                <Box component="main" sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
+                    <Toolbar />
+                    <Routes>
+                        <Route exact path="/" element={<Dashboard />} />
+                        <Route path="/account" element={<Accounts />} />
+                        <Route path="/calculator" element={<Calculator />} />
+                    </Routes>
+                </Box>
             </Box>
-        </Box>
+        </Router>
     );
 }
 

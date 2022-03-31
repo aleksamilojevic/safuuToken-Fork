@@ -1,7 +1,16 @@
 .App {
   text-align: center;
+  
 }
+.mask{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  opacity: 50%;
+  z-index: -1;
 
+}
 body {
   overflow-x: hidden; /* Hide scrollbars */
   background-image: url('assets/wallpaper1.png');
@@ -26,9 +35,6 @@ body {
 .side_selector li{
   margin-top: 1rem;
 }
-.side_select{
-  cursor: pointer;
-}
 .side_select.acive a{
   color:#97d553;
 }
@@ -36,37 +42,15 @@ body {
   color:white;
   text-decoration: none;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.account_box{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator_box{
+  display: flex;
+  justify-content: space-between;
 }
-
-@media only screen and (max-width: 1023px) {
-  .mintSection {  
-    margin: 12px;
-    width: auto;
-    height: auto;
-  }
-}
-
-@media only screen and (max-width: 766px) {
-  .mintImage {
-    width: 40%;
-  }
-  .App-header a {
-    margin: 0px 6px;
-  }
-  .App-header {
-    justify-content: space-between;
-  }
+.account_box h6{
+  display: inline;
 }
