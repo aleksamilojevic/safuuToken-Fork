@@ -30,7 +30,7 @@ export default function Dashboard(props) {
                                 <Grid container spacing={3}>
                                     <Grid item xs={12} sm={4}>
                                         <Typography variant="h6" component="div" gutterBottom>
-                                            SAFUU Price
+                                            MEDUSA Price
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
                                             $88,586,328
@@ -82,7 +82,7 @@ export default function Dashboard(props) {
                         <Grid item xs={12} sm={6}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    SAFUU Price
+                                    MEDUSA Price
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
                                     $171.33
@@ -112,7 +112,7 @@ export default function Dashboard(props) {
                         <Grid item xs={12} sm={6}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    SAFUU Insurance Fund Value
+                                    MEDUSA Insurance Fund Value
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
                                     $2,114,478
@@ -125,7 +125,7 @@ export default function Dashboard(props) {
                                     # Value of FirePit
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    91,455.86 SAFUU
+                                    91,455.86 MEDUSA
                                 </Typography>
                             </Item>
                         </Grid>

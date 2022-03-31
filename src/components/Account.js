@@ -32,7 +32,7 @@ export default function Accounts(props) {
                                 $0
                             </Typography>
                             <Typography variant="body1" gutterBottom>
-                                0 SAFUU
+                                0 MEDUSA
                             </Typography>
                         </Item>
                     </Grid>
@@ -65,12 +65,12 @@ export default function Accounts(props) {
                     <Grid item xs={12} sm={12}>
                         <Item>
                             <Box className={"account_box"}>
-                                <Typography variant="h6">Current SAFUU Price</Typography>
+                                <Typography variant="h6">Current MEDUSA Price</Typography>
                                 <Typography variant="h6">$160.74</Typography>
                             </Box>
                             <Box className={"account_box"}>
                                 <Typography variant="h6">Next Reward Amount</Typography>
-                                <Typography variant="h6">0 SAFUU</Typography>
+                                <Typography variant="h6">0 MEDUSA</Typography>
                             </Box>
                             <Box className={"account_box"}>
                                 <Typography variant="h6">Next Reward Amount USD</Typography>

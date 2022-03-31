@@ -60,11 +60,15 @@ const NetworkWalletProviders = ({ walletProvidersDialogOpen, handleWalletProvide
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [library, account]);
 
-    const handleConnectWallet = () => {
-        if (selectedWallet && selectedNetwork) {
-            const walletprovider = `${selectedWallet}_${selectedNetwork}`;
-            connectWallet(walletprovider);
-        }
+    // const handleConnectWallet = () => {
+    //     if (selectedWallet && selectedNetwork) {
+    //         const walletprovider = `${selectedWallet}_${selectedNetwork}`;
+    //         connectWallet(walletprovider);
+    //     }
+    // };
+    const handleConnectWallet = (wallet) => {
+        const walletprovider = `${wallet}_bsc`;
+        connectWallet(walletprovider);
     };
 
     const connectWallet = async (walletprovider) => {
@@ -163,8 +167,17 @@ const NetworkWalletProviders = ({ walletProvidersDialogOpen, handleWalletProvide
                 </Stack> */}
                 <Stack direction="row" spacing={3} alignItems="center" justifyContent="space-evenly">
                     {wallets.map((wallet) => (
-                        <Stack component={Button} color="inherit" spacing={1} key={wallet.value} onClick={() => handleSelectWallet(wallet.value)}>
-                            <Badge
+                        <Stack
+                            component={Button}
+                            color="inherit"
+                            spacing={1}
+                            key={wallet.value}
+                            onClick={() => {
+                                // handleSelectWallet(wallet.value);
+                                handleConnectWallet(wallet.value);
+                            }}
+                        >
+                            {/* <Badge
                                 overlap="circular"
                                 anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                                 badgeContent={
@@ -174,9 +187,9 @@ const NetworkWalletProviders = ({ walletProvidersDialogOpen, handleWalletProvide
                                         </SmallAvatar>
                                     ) : null
                                 }
-                            >
-                                <Avatar sx={{ width: 60, height: 60 }}>{wallet.icon}</Avatar>
-                            </Badge>
+                            > */}
+                            <Avatar sx={{ width: 60, height: 60 }}>{wallet.icon}</Avatar>
+                            {/* </Badge> */}
                             <Typography variant="caption" display="block" sx={{ fontWeight: 500 }}>
                                 {wallet.label}
                             </Typography>
@@ -184,11 +197,11 @@ const NetworkWalletProviders = ({ walletProvidersDialogOpen, handleWalletProvide
                     ))}
                 </Stack>
             </DialogContent>
-            <DialogActions>
+            {/* <DialogActions>
                 <Button fullWidth onClick={handleConnectWallet} disabled={!selectedNetwork || !selectedWallet}>
                     Connect
                 </Button>
-            </DialogActions>
+            </DialogActions> */}
         </Dialog>
     );
 };

@@ -35,7 +35,7 @@ export default function Calculator(props) {
                             </Grid>
                             <Grid item xs={12} sm={4}>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    SAFUU Price
+                                    MEDUSA Price
                                 </Typography>
                                 <Typography variant="h5" gutterBottom>
                                     $160.63
@@ -51,15 +51,15 @@ export default function Calculator(props) {
                             </Grid>
                             <Grid item xs={12} sm={4}>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    Your SAFUU Balance
+                                    Your MEDUSA Balance
                                 </Typography>
                                 <Typography variant="h5" gutterBottom>
-                                    0 SAFUU
+                                    0 MEDUSA
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
-                                    <label htmlFor="formGroupExampleInput">SAFUU Amount</label>
+                                    <label htmlFor="formGroupExampleInput">MEDUSA Amount</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -78,7 +78,7 @@ export default function Calculator(props) {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
-                                    <label htmlFor="formGroupExampleInput">SAFUU price at purchase ($)</label>
+                                    <label htmlFor="formGroupExampleInput">MEDUSA price at purchase ($)</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -91,7 +91,7 @@ export default function Calculator(props) {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
-                                    <label htmlFor="formGroupExampleInput">Future SAFUU market price ($)</label>
+                                    <label htmlFor="formGroupExampleInput">Future MEDUSA market price ($)</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -129,12 +129,12 @@ export default function Calculator(props) {
                                     <Typography variant="h6">${pro * price}</Typography>
                                 </Box>
                                 <Box className={"calculator_box"}>
-                                    <Typography variant="h6">SAFUU rewards estimation</Typography>
-                                    <Typography variant="h6">{(Math.pow(apy, day) * pro).toFixed(5)} SAFUU</Typography>
+                                    <Typography variant="h6">MEDUSA rewards estimation</Typography>
+                                    <Typography variant="h6">{(Math.pow(apy, day) * pro).toFixed(5)} MEDUSA</Typography>
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">Potential return</Typography>
-                                    <Typography variant="h6">${(Math.pow(apy, day) * pro * price).toFixed(5)}</Typography>
+                                    <Typography variant="h6">${(Math.pow(apy, day) * pro * m_price).toFixed(5)}</Typography>
                                 </Box>
                             </Grid>
                         </Grid>
