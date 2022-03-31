@@ -76,7 +76,7 @@ export default function Calculator(props) {
                                     <input
                                         type="text"
                                         className="form-control"
-                                        readOnly 
+                                        readonly 
                                         value={383025.8}
                                     />
                                 </div>
