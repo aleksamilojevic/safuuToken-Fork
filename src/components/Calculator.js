@@ -14,7 +14,7 @@ import Slider, { SliderThumb } from "@mui/material/Slider";
 
 export default function Calculator(props) {
     const [pro, setPro] = useState(0);
-    const apy = Math.pow(2,(Math.log2(383025.8)/365);
+    const apy = Math.pow(2, Math.log2(383025.8) / 365);
     const [price, setPrice] = useState(160.63);
     const [m_price, setMPrice] = useState(160.63);
     const [day, setDay] = useState(30);
@@ -73,12 +73,7 @@ export default function Calculator(props) {
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
                                     <label htmlFor="formGroupExampleInput">APY (%)</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        readonly 
-                                        value={383025.8}
-                                    />
+                                    <input type="text" className="form-control" readonly value={383025.8} />
                                 </div>
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -133,11 +128,11 @@ export default function Calculator(props) {
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">SAFUU rewards estimation</Typography>
-                                    <Typography variant="h6">{Math.pow(apy,day)*pro} SAFUU</Typography>
+                                    <Typography variant="h6">{Math.pow(apy, day) * pro} SAFUU</Typography>
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">Potential return</Typography>
-                                    <Typography variant="h6">${Math.pow(apy,day)*pro*price}</Typography>
+                                    <Typography variant="h6">${Math.pow(apy, day) * pro * price}</Typography>
                                 </Box>
                             </Grid>
                         </Grid>
