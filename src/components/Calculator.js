@@ -14,7 +14,7 @@ import Slider, { SliderThumb } from "@mui/material/Slider";
 
 export default function Calculator(props) {
     const [pro, setPro] = useState(0);
-    const [apy, setApy] = useState(383025.8);
+    const apy = 383025.8;
     const [price, setPrice] = useState(160.63);
     const [m_price, setMPrice] = useState(160.63);
     const [day, setDay] = useState(30);
@@ -76,9 +76,7 @@ export default function Calculator(props) {
                                     <input
                                         type="text"
                                         className="form-control"
-                                        onChange={(e) => {
-                                            setApy(e.target.value);
-                                        }}
+                                        readOnly 
                                         value={apy}
                                     />
                                 </div>
@@ -135,11 +133,11 @@ export default function Calculator(props) {
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">SAFUU rewards estimation</Typography>
-                                    <Typography variant="h6">{Math.pow(Math.log(apy*1-1)/Math.log(365),day)*pro} SAFUU</Typography>
+                                    <Typography variant="h6">{Math.pow(Math.log((apy-1))/Math.log(365),day)*pro} SAFUU</Typography>
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">Potential return</Typography>
-                                    <Typography variant="h6">${Math.pow(Math.log(apy*1-1)/Math.log(365),day)*pro*price}</Typography>
+                                    <Typography variant="h6">${Math.pow(Math.log((apy-1))/Math.log(365),day)*pro*price}</Typography>
                                 </Box>
                             </Grid>
                         </Grid>
