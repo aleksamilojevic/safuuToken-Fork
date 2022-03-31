@@ -135,7 +135,7 @@ export default function Calculator(props) {
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">SAFUU rewards estimation</Typography>
-                                    <Typography variant="h6">{Math.pow(Math.log(apy)/Math.log(365),day)*pro} SAFUU</Typography>
+                                    <Typography variant="h6">{Math.pow(Math.log(apy-1)/Math.log(365),day)*pro} SAFUU</Typography>
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">Potential return</Typography>
