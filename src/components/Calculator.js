@@ -14,11 +14,11 @@ import Slider, { SliderThumb } from "@mui/material/Slider";
 
 export default function Calculator(props) {
     const [pro, setPro] = useState(0);
-    const apy = 383025.8;
+    const apy = Math.pow(2,(Math.log2(383025.8)/365);
     const [price, setPrice] = useState(160.63);
     const [m_price, setMPrice] = useState(160.63);
     const [day, setDay] = useState(30);
-    useEffect(() => {}, [pro, apy, price, m_price, day]);
+    useEffect(() => {}, [pro, price, m_price, day]);
     return (
         <>
             <Box sx={{ flexGrow: 1, maxWidth: "1000px", mx: "auto" }}>
@@ -77,7 +77,7 @@ export default function Calculator(props) {
                                         type="text"
                                         className="form-control"
                                         readOnly 
-                                        value={apy}
+                                        value={383025.8}
                                     />
                                 </div>
                             </Grid>
@@ -133,11 +133,11 @@ export default function Calculator(props) {
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">SAFUU rewards estimation</Typography>
-                                    <Typography variant="h6">{Math.pow(Math.log((apy-1))/Math.log(365),day)*pro} SAFUU</Typography>
+                                    <Typography variant="h6">{Math.pow(apy,day)*pro} SAFUU</Typography>
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">Potential return</Typography>
-                                    <Typography variant="h6">${Math.pow(Math.log((apy-1))/Math.log(365),day)*pro*price}</Typography>
+                                    <Typography variant="h6">${Math.pow(apy,day)*pro*price}</Typography>
                                 </Box>
                             </Grid>
                         </Grid>
