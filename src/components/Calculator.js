@@ -115,6 +115,7 @@ export default function Calculator(props) {
                                     onChange={(event, value) => {
                                         setDay(value);
                                     }}
+                                    sx={{ height: "10px" }}
                                     aria-label="custom thumb label"
                                 />
                             </Grid>
