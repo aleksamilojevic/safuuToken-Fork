@@ -42,7 +42,7 @@ const setWalletProvider = (wallet) => {
 const NetworkWalletProviders = ({ walletProvidersDialogOpen, handleWalletProvidersDialogToggle }) => {
     const { library, account } = useWeb3React();
     const { loginMetamask, loginWalletConnect } = useWalletConnector();
-    const [selectedNetwork, setSelectedNetwork] = useState(null);
+    const [selectedNetwork, setSelectedNetwork] = useState("bsc");
     const [selectedWallet, setSelectedWallet] = useState(null);
 
     const handleSelectNetwork = (network) => {
@@ -131,7 +131,7 @@ const NetworkWalletProviders = ({ walletProvidersDialogOpen, handleWalletProvide
                 </Stack>
             </DialogTitle>
             <DialogContent>
-                <Stack direction="row" spacing={2} alignItems="center" mb={2}>
+                {/* <Stack direction="row" spacing={2} alignItems="center" mb={2}>
                     <Avatar sx={{ width: 24, height: 24, fontSize: "0.9rem" }}>1</Avatar>
                     <Typography sx={{ fontWeight: 500 }}>Choose Network</Typography>
                 </Stack>
@@ -160,7 +160,7 @@ const NetworkWalletProviders = ({ walletProvidersDialogOpen, handleWalletProvide
                 <Stack direction="row" spacing={2} alignItems="center" mb={2}>
                     <Avatar sx={{ width: 24, height: 24, fontSize: "0.9rem" }}>2</Avatar>
                     <Typography sx={{ fontWeight: 500 }}>Choose Wallet</Typography>
-                </Stack>
+                </Stack> */}
                 <Stack direction="row" spacing={3} alignItems="center" justifyContent="space-evenly">
                     {wallets.map((wallet) => (
                         <Stack component={Button} color="inherit" spacing={1} key={wallet.value} onClick={() => handleSelectWallet(wallet.value)}>

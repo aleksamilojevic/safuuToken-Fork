@@ -37,7 +37,7 @@ const Authenticated = ({ library, account }) => {
             <Chip
                 label={getEllipsisTxt(account, 6)}
                 onClick={handleAccountDetailsDialogToggle}
-                sx={{ fontWeight: 700, backgroundColor: "#1a90ff", color: "white", "&:hover": { backgroundColor: "rgb(18, 100, 178)" } }}
+                sx={{ fontWeight: 700, backgroundColor: "#b57b12", color: "white", "&:hover": { backgroundColor: "#ad7207" } }}
             />
             <AccountDetails
                 accountDetailsDialogOpen={accountDetailsDialogOpen}
