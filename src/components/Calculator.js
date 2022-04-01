@@ -40,7 +40,7 @@ export default function Calculator(props) {
                                         MEDUSA Price
                                     </Typography>
                                     <Typography variant="h5" gutterBottom>
-                                        $160.63
+                                        $0
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={12} sm={4}>
