@@ -57,7 +57,7 @@ export default function Accounts(props) {
                                     Next Rebase:
                                 </Typography>
                                 <Typography variant="h4" gutterBottom>
-                                    10:00:00
+                                    15:00:00
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
                                     You will earn money soon
@@ -68,7 +68,7 @@ export default function Accounts(props) {
                             <Item>
                                 <Box className={"account_box"}>
                                     <Typography variant="h6">Current MEDUSA Price</Typography>
-                                    <Typography variant="h6">$160.74</Typography>
+                                    <Typography variant="h6">$0</Typography>
                                 </Box>
                                 <Box className={"account_box"}>
                                     <Typography variant="h6">Next Reward Amount</Typography>

@@ -8,12 +8,12 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
+import { FaDiscord } from "react-icons/fa";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { Layers, AccountCircle, Calculate, SwapHorizontalCircle, Article, GitHub, Twitter, Museum } from "@mui/icons-material";
-// import Discord from "@mui/icons-material/Discord";
 import Toolbar from "@mui/material/Toolbar";
 import logo from "../assets/images/logo512.png";
 
@@ -81,11 +81,11 @@ export default function Sidebar(props) {
                     <a href="#">
                         <GitHub sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com/finance_medusa" target={"_blank"}>
                         <Twitter sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                     </a>
-                    <a href="#">
-                        <Museum sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
+                    <a href="https://discord.gg/ybbW4rFB9u" target={"_blank"}>
+                        <FaDiscord size={"2rem"} sx={{ color: "white", mr: "1rem" }} />
                     </a>
                 </li>
             </ul>
@@ -162,11 +162,11 @@ export default function Sidebar(props) {
                             <a href="#">
                                 <GitHub sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                             </a>
-                            <a href="#">
+                            <a href="https://twitter.com/finance_medusa" target={"_blank"}>
                                 <Twitter sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                             </a>
-                            <a href="#">
-                                <Museum sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
+                            <a href="https://discord.gg/ybbW4rFB9u" target={"_blank"}>
+                                <FaDiscord size={"2rem"} sx={{ color: "white", mr: "1rem" }} />
                             </a>
                         </li>
                     </ul>

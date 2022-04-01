@@ -16,8 +16,8 @@ import Fade from "@mui/material/Fade";
 export default function Calculator(props) {
     const [pro, setPro] = useState(0);
     const apy = Math.pow(2, Math.log2(383025.8 / 100 - 1) / 365);
-    const [price, setPrice] = useState(160.63);
-    const [m_price, setMPrice] = useState(160.63);
+    const [price, setPrice] = useState(0);
+    const [m_price, setMPrice] = useState(0);
     const [day, setDay] = useState(30);
     useEffect(() => {}, [pro, price, m_price, day]);
     return (

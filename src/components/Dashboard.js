@@ -33,7 +33,7 @@ export default function Dashboard(props) {
                                             MEDUSA Price
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
-                                            $88,586,328
+                                            $0
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={4}>
@@ -41,7 +41,7 @@ export default function Dashboard(props) {
                                             Market Cap
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
-                                            $88,586,328
+                                            $0
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={4}>
@@ -49,7 +49,7 @@ export default function Dashboard(props) {
                                             Circulating Supply
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
-                                            515,118.1
+                                            0
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={4}>
@@ -65,7 +65,7 @@ export default function Dashboard(props) {
                                             Next Rebase
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
-                                            00:10:10
+                                            15:00:00
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={4}>
@@ -73,7 +73,7 @@ export default function Dashboard(props) {
                                             Total Supply
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
-                                            606,573.96
+                                            0
                                         </Typography>
                                     </Grid>
                                 </Grid>
@@ -85,7 +85,7 @@ export default function Dashboard(props) {
                                     MEDUSA Price
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $171.33
+                                    $0
                                 </Typography>
                             </Item>
                         </Grid>
@@ -95,7 +95,7 @@ export default function Dashboard(props) {
                                     Market Value of Treasury Asset
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $3,330,505
+                                    $0
                                 </Typography>
                             </Item>
                         </Grid>
@@ -105,7 +105,7 @@ export default function Dashboard(props) {
                                     Pool Value
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $16,675,317
+                                    $0
                                 </Typography>
                             </Item>
                         </Grid>
@@ -115,7 +115,7 @@ export default function Dashboard(props) {
                                     Risk Free Fund Value
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $2,114,478
+                                    $0
                                 </Typography>
                             </Item>
                         </Grid>
@@ -125,7 +125,7 @@ export default function Dashboard(props) {
                                     # Value of Venom Pit
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    91,455.86 MEDUSA
+                                    0 MEDUSA
                                 </Typography>
                             </Item>
                         </Grid>
@@ -135,7 +135,7 @@ export default function Dashboard(props) {
                                     $ Value of Venom Pit
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $15,727,926
+                                    $0
                                 </Typography>
                             </Item>
                         </Grid>
@@ -145,7 +145,7 @@ export default function Dashboard(props) {
                                     % Venom Pit : Supply
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    15.07%
+                                    0%
                                 </Typography>
                             </Item>
                         </Grid>
