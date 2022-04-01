@@ -104,7 +104,7 @@ export default function Sidebar(props) {
                 }}
                 sx={{
                     display: { xs: "block", sm: "none" },
-                    "& .MuiDrawer-paper": { border: "none", background: "transparent", width: drawerWidth },
+                    "& .MuiDrawer-paper": { border: "none", backgroundColor: "#af0b01", width: drawerWidth },
                 }}
             >
                 <div>
