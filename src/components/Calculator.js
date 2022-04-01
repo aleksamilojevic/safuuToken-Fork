@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { Card, CardContent } from "@mui/material";
+import { Button, Card, CardContent } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { InputBase } from "@mui/material";
 import Slider, { SliderThumb } from "@mui/material/Slider";
@@ -60,14 +60,28 @@ export default function Calculator(props) {
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
                                     <label htmlFor="formGroupExampleInput">MEDUSA Amount</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        onChange={(e) => {
-                                            setPro(e.target.value);
-                                        }}
-                                        value={pro}
-                                    />
+                                    <div style={{ display: "flex" }}>
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            onChange={(e) => {
+                                                setPro(e.target.value);
+                                            }}
+                                            value={pro}
+                                        />
+                                        <button
+                                            style={{
+                                                border: "none",
+                                                marginLeft: "-42px",
+                                                backgroundColor: "#b14901",
+                                                color: "white",
+                                                borderRadius: "3px",
+                                                fontWeight: "bold",
+                                            }}
+                                        >
+                                            Max
+                                        </button>
+                                    </div>
                                 </div>
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -79,27 +93,55 @@ export default function Calculator(props) {
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
                                     <label htmlFor="formGroupExampleInput">MEDUSA price at purchase ($)</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        onChange={(e) => {
-                                            setPrice(e.target.value);
-                                        }}
-                                        value={price}
-                                    />
+                                    <div style={{ display: "flex" }}>
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            onChange={(e) => {
+                                                setPrice(e.target.value);
+                                            }}
+                                            value={price}
+                                        />
+                                        <button
+                                            style={{
+                                                border: "none",
+                                                marginLeft: "-69px",
+                                                backgroundColor: "#b14901",
+                                                color: "white",
+                                                borderRadius: "3px",
+                                                fontWeight: "bold",
+                                            }}
+                                        >
+                                            Current
+                                        </button>
+                                    </div>
                                 </div>
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
                                     <label htmlFor="formGroupExampleInput">Future MEDUSA market price ($)</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        onChange={(e) => {
-                                            setMPrice(e.target.value);
-                                        }}
-                                        value={m_price}
-                                    />
+                                    <div style={{ display: "flex" }}>
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            onChange={(e) => {
+                                                setMPrice(e.target.value);
+                                            }}
+                                            value={m_price}
+                                        />
+                                        <button
+                                            style={{
+                                                border: "none",
+                                                marginLeft: "-69px",
+                                                backgroundColor: "#b14901",
+                                                color: "white",
+                                                borderRadius: "3px",
+                                                fontWeight: "bold",
+                                            }}
+                                        >
+                                            Current
+                                        </button>
+                                    </div>
                                 </div>
                             </Grid>
                             <Grid item xs={12} sm={12}>

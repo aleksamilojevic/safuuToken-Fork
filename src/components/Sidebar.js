@@ -23,6 +23,7 @@ export default function Sidebar(props) {
     // useEffect(() => {
     //     console.log(select_sideItem);
     // }, select_sideItem);
+
     const drawer = (
         <div>
             <img className="side_logo" src={logo} />
@@ -97,6 +98,7 @@ export default function Sidebar(props) {
                 variant="temporary"
                 open={props.open}
                 onClose={props.closeMenu}
+                onClick={props.closeMenu}
                 ModalProps={{
                     keepMounted: true, // Better open performance on mobile.
                 }}

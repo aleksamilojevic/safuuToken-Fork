@@ -112,7 +112,7 @@ export default function Dashboard(props) {
                         <Grid item xs={12} sm={6}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    MEDUSA Insurance Fund Value
+                                    Risk Free Fund Value
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
                                     $2,114,478
@@ -122,7 +122,7 @@ export default function Dashboard(props) {
                         <Grid item xs={12} sm={4}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    # Value of FirePit
+                                    # Value of Venom Pit
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
                                     91,455.86 MEDUSA
@@ -132,7 +132,7 @@ export default function Dashboard(props) {
                         <Grid item xs={12} sm={4}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    $ Value of FirePit
+                                    $ Value of Venom Pit
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
                                     $15,727,926
@@ -142,7 +142,7 @@ export default function Dashboard(props) {
                         <Grid item xs={12} sm={4}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    % FirePit : Supply
+                                    % Venom Pit : Supply
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
                                     15.07%
