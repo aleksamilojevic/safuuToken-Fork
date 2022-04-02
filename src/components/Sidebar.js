@@ -78,7 +78,7 @@ export default function Sidebar(props) {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://t.me/+M5oe2Itrf-VlOTA1" target={"_blank"}>
                         <Telegram sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                     </a>
                     <a href="https://twitter.com/finance_medusa" target={"_blank"}>
@@ -159,7 +159,7 @@ export default function Sidebar(props) {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://t.me/+M5oe2Itrf-VlOTA1" target={"_blank"}>
                                 <Telegram sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                             </a>
                             <a href="https://twitter.com/finance_medusa" target={"_blank"}>
