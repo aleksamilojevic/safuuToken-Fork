@@ -13,7 +13,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { Layers, AccountCircle, Calculate, SwapHorizontalCircle, Article, GitHub, Twitter, Museum } from "@mui/icons-material";
+import { Layers, AccountCircle, Calculate, SwapHorizontalCircle, Article, Telegram, Twitter, Museum } from "@mui/icons-material";
 import Toolbar from "@mui/material/Toolbar";
 import logo from "../assets/images/logo512.png";
 
@@ -79,7 +79,7 @@ export default function Sidebar(props) {
                 </li>
                 <li>
                     <a href="#">
-                        <GitHub sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
+                        <Telegram sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                     </a>
                     <a href="https://twitter.com/finance_medusa" target={"_blank"}>
                         <Twitter sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
@@ -160,7 +160,7 @@ export default function Sidebar(props) {
                         </li>
                         <li>
                             <a href="#">
-                                <GitHub sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
+                                <Telegram sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                             </a>
                             <a href="https://twitter.com/finance_medusa" target={"_blank"}>
                                 <Twitter sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
